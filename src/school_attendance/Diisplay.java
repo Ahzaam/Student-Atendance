@@ -38,7 +38,7 @@ public class Diisplay extends javax.swing.JFrame {
         Connection conn = null ;
 
          try{
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","glide33211");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/student","root","");
             java.sql.Statement stmt = (java.sql.Statement) conn.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM student_details ;");
             while(rs.next()) {

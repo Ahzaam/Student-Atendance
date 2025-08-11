@@ -1,10 +1,10 @@
 package school_attendance;
 
-import com.mysql.cj.xdevapi.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +19,7 @@ public class School_attendance {
     
     
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "glide33211";
+    private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://localhost:3306/student";
     
     
@@ -64,7 +64,7 @@ public class School_attendance {
         try{
             
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            java.sql.Statement stmt = (java.sql.Statement) conn.createStatement(); 
+            Statement stmt = conn.createStatement(); 
             
             stmt.executeUpdate(run);
             System.out.println("Data Writed "+run);
@@ -84,7 +84,7 @@ public class School_attendance {
          try{
              
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            java.sql.Statement stmt = (java.sql.Statement) conn.createStatement();
+            Statement stmt = conn.createStatement();
                     
             ResultSet rs = stmt.executeQuery("SELECT id FROM student_details ;");
             

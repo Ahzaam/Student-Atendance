@@ -30,7 +30,7 @@ import static school_attendance.School_attendance.refreshing;
 public class attendance_ui extends javax.swing.JFrame {
     
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "glide33211";
+    private static final String PASSWORD = "";
     private static final String URL = "jdbc:mysql://localhost:3306/student";
     
     int count = 0 ;
