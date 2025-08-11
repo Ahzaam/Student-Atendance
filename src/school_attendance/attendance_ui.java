@@ -719,7 +719,7 @@ public class attendance_ui extends javax.swing.JFrame {
             p.setEnabled(true);
             
             String date = txtd.getText();
-            //dataWrite("ALTER TABLE student_details ADD `"+txty.getText()+"-"+txtm.getText()+"-"+txtm.getText()+"` VARCHAR(2);");
+            dataWrite("ALTER TABLE student_details ADD `"+txty.getText()+"-"+txtm.getText()+"-"+txtm.getText()+"` VARCHAR(2);");
     
     
     }//GEN-LAST:event_jButton3ActionPerformed
