@@ -20,21 +20,25 @@ public class database {
         return URL;
     }
 
-    public static void getConnection() {
+    public static Connection getConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
             if (conn != null) {
                 System.out.println("Connected to the database successfully!");
+                return conn;
             } else {
                 System.out.println("Failed to make connection!");
+                return null;
             }
         }
         catch (SQLException e) {
             System.out.println("SQL Exception: " + e.getMessage());
+            return null;
         }
         catch (ClassNotFoundException e) {
             System.out.println("Class Not Found Exception database: " + e.getMessage());
+            return null;
         }
     }
 
